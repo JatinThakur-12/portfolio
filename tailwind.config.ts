@@ -16,9 +16,9 @@ const config = {
         extend: {
             fontFamily: {
                 sans: ["var(--font-sans)", ...fontFamily.sans],
-                geist_mono:["var(--font-geist-mono)"],
-                geist_sans:["var(--font-geist-sans)"],
-                noto_sans:["var(--font-noto-sans)"]
+                geist_mono: ["var(--font-geist-mono)"],
+                geist_sans: ["var(--font-geist-sans)"],
+                noto_sans: ["var(--font-noto-sans)"],
             },
             colors: {
                 border: "hsl(var(--border))",
@@ -29,6 +29,7 @@ const config = {
 
                 background: "hsl(var(--background))",
                 foreground: "hsl(var(--foreground))",
+
                 primary: {
                     DEFAULT: "hsl(var(--primary))",
                     foreground: "hsl(var(--primary-foreground))",
