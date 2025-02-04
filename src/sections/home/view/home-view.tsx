@@ -68,7 +68,7 @@ function HomeView() {
                     <h2 className="text-xl font-bold">About</h2>
                 </BlurFade>
                 <BlurFade delay={BLUR_FADE_DELAY * 4}>
-                    <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground ">
+                    <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:text-white dark:prose-invert">
                         {markdown}
                     </Markdown>
                 </BlurFade>
