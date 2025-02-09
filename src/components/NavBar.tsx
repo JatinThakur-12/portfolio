@@ -64,7 +64,7 @@ export default function Navbar() {
                     </DockIcon>
                 ))}
                 <Divider orientation="vertical" className="h-full" />
-                {Object.entries(social).map(([name, obj], index) => (
+                {Object.entries(social).map(([name, obj]) => (
                     <DockIcon key={name}>
                         <Tooltip content={name}>
                             <Link

@@ -2,7 +2,6 @@
 
 import { cn } from "@/lib/classes";
 import { AnimatePresence, motion, Variants } from "framer-motion";
-import { useMemo } from "react";
 
 interface BlurFadeTextProps {
     children: React.ReactNode;
