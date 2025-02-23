@@ -40,7 +40,7 @@ function HomeView() {
                                 className="max-w-[600px] md:text-base"
                                 delay={BLUR_FADE_DELAY * 2}
                                 text={
-                                    "I harnesses the power of Node.js, SSR, and Next.js to create seamless user experiences."
+                                    "I harness the power of Node.js, SSR, and Next.js to create seamless user experiences."
                                 }
                             />
                         </div>
