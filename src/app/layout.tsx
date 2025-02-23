@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/classes";
 import MainLayout from "@/layouts/main-layout";
 import Navbar from "@/components/NavBar";
+import Script from "next/script";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -31,6 +32,15 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" suppressHydrationWarning>
+            <head>
+                <Script id="google-analytics" strategy="afterInteractive">
+                    {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P5399227');`}
+                </Script>
+            </head>
             <body
                 className={cn(
                     "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",
@@ -40,6 +50,16 @@ export default function RootLayout({
                     "antialiased"
                 )}
             >
+                {/* <!-- Google Tag Manager (noscript) --> */}
+                <noscript>
+                    <iframe
+                        src="https://www.googletagmanager.com/ns.html?id=GTM-P5399227"
+                        height="0"
+                        width="0"
+                        style={{ display: "none", visibility: "hidden" }}
+                    ></iframe>
+                </noscript>
+                {/* <!-- End Google Tag Manager (noscript) --> */}
                 <MainLayout>
                     {children}
 
