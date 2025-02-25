@@ -10,7 +10,6 @@ import { Chip } from "@/components/ui/chip";
 import { Icons } from "@/components/Icons";
 import { ProjectCard } from "@/components/ProjectCard";
 import Link from "next/link";
-import { h1 } from "motion/react-client";
 
 const BLUR_FADE_DELAY = 0.04;
 
