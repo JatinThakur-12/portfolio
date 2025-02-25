@@ -10,6 +10,7 @@ import { Chip } from "@/components/ui/chip";
 import { Icons } from "@/components/Icons";
 import { ProjectCard } from "@/components/ProjectCard";
 import Link from "next/link";
+import { h1 } from "motion/react-client";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -31,13 +32,12 @@ function HomeView() {
                                 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-5xl/none font-geist_sans"
                                 delay={BLUR_FADE_DELAY}
                             />
-                            <h1>
-                                <BlurFadeText
-                                    text="I'm Jatin Thakur"
-                                    className="text-3xl font-bold tracking-tighter sm:text-4xl xl:text-5xl/none font-geist_sans"
-                                    delay={BLUR_FADE_DELAY}
-                                />
-                            </h1>
+                            <BlurFadeText
+                                text="I'm Jatin Thakur"
+                                className="text-3xl font-bold tracking-tighter sm:text-4xl xl:text-5xl/none font-geist_sans"
+                                delay={BLUR_FADE_DELAY}
+                                as="h1"
+                            />
                             <BlurFadeText
                                 className="max-w-[600px] md:text-base"
                                 delay={BLUR_FADE_DELAY * 2}
