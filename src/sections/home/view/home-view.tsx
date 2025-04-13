@@ -10,6 +10,7 @@ import { Chip } from "@/components/ui/chip";
 import { Icons } from "@/components/Icons";
 import { ProjectCard } from "@/components/ProjectCard";
 import Link from "next/link";
+import { projectList } from "../data/projectList";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -19,35 +20,6 @@ const BLUR_FADE_DELAY = 0.04;
 const markdown =
     " As a Frontend Developer, my role involves translating complex functionalities into accessible web features that drive customer satisfaction at [Travomint](https://travomint.com). Currently expanding my expertise, which complements my hands-on development work. My goal is to continuously innovate and contribute to the tech industry's growth through cutting-edge solutions.";
 
-const projectList = [
-    {
-        title: "Travomint",
-        href: "https://www.travomint.com",
-        dates: "Jan 2024 - Feb 2024",
-        active: true,
-        description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet soluta id accusamus, veritatis consectetur [maiores unde tempore](https://facebook.com), dolores autem, nihil cupiditate nam ducimus tempora quo adipisci hic debitis ut nisi maiores unde tempore similique corporis? Dolore numquam sint voluptates commodi laudantium. Ea optio, vero voluptatum eligendi earum voluptates?",
-        technologies: [
-            "Next.js",
-            "Typescript",
-            "PostgreSQL",
-            "Prisma",
-            "TailwindCSS",
-            "Stripe",
-            "Shadcn UI",
-            "Magic UI",
-        ],
-        links: [
-            {
-                type: "Website",
-                href: "https://google.com",
-                icon: <Icons.globe className="size-3" />,
-            },
-        ],
-        image: "",
-        video: "https://divine-voice-26cf.thakurjatinx.workers.dev/EXhDsU4n6W.mp4",
-    },
-];
 function HomeView() {
     return (
         <main className="flex flex-col min-h-[100dvh] space-y-10 font-noto_sans">
@@ -204,7 +176,7 @@ function HomeView() {
 
                     <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
                         {projectList.map((project, id) => (
-                            <BlurFade key={project.title} delay={BLUR_FADE_DELAY * 12 + id * 0.05}>
+                            <BlurFade key={project.title}  delay={BLUR_FADE_DELAY * 12 + id * 0.05}>
                                 <ProjectCard
                                     href={project.href}
                                     key={project.title}

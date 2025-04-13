@@ -4,6 +4,7 @@ import { cn } from "@/lib/classes";
 import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import { Icons } from "./Icons";
 
 interface Props {
     title: string;
@@ -24,7 +25,7 @@ interface Props {
 
 export function ProjectCard({ title, href, description, dates, tags, link, image, video, links, className }: Props) {
     return (
-        <Card className={"flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"}>
+        <Card className={"flex flex-col overflow-hidden border-2 dark:border shadow-md hover:shadow-xl transition-all duration-300 ease-out h-full max-w-[300px] sm:max-w-full"}>
             <Link href={href || "#"} className={cn("block cursor-pointer", className)}>
                 {video && (
                     <video
@@ -53,11 +54,14 @@ export function ProjectCard({ title, href, description, dates, tags, link, image
             <CardContent className="mt-auto flex flex-col px-2">
                 {tags && tags.length > 0 && (
                     <div className="mt-2 flex flex-wrap gap-1">
-                        {tags?.map((tag) => (
-                            <Chip className="px-1 py-0 text-[10px]" variant="secondary" key={tag}>
+                        {tags?.map((tag) => {
+                            const cleanedTag = tag.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+                            const Icon = Icons[cleanedTag as keyof typeof Icons];
+                            return <Chip className="px-1 py-0 text-[10px]" variant="secondary" key={tag}>
                                 {tag}
+                                {Icon && <Icon className="ml-1 h-3 w-3" />}
                             </Chip>
-                        ))}
+                        })}
                     </div>
                 )}
             </CardContent>
