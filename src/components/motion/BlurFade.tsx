@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/classes";
-import { AnimatePresence, motion, Variants } from "framer-motion";
+import { AnimatePresence, motion, MotionProps, Variants } from "framer-motion";
 
 interface BlurFadeTextProps {
     children: React.ReactNode;
@@ -13,18 +13,28 @@ interface BlurFadeTextProps {
     duration?: number;
     delay?: number;
     yOffset?: number;
+    as?: keyof HTMLElementTagNameMap;
 }
-const BlurFade = ({ children, className, variant, delay = 0, yOffset = 8}: BlurFadeTextProps) => {
+const BlurFade = ({ children, className, variant, delay = 0, yOffset = 8, as,
+}: BlurFadeTextProps) => {
     const defaultVariants: Variants = {
         hidden: { y: yOffset, opacity: 0, filter: "blur(8px)" },
         visible: { y: 0, opacity: 1, filter: "blur(0px)" },
     };
     const combinedVariants = variant || defaultVariants;
 
+    const Tag = motion.create(as ?? "div") as React.ForwardRefExoticComponent<
+        MotionProps &
+        React.RefAttributes<Element> & {
+            children: React.ReactNode;
+            className: string;
+        }
+    >;
+
     return (
-        <div className="flex">
+        <div className="inline-block">
             <AnimatePresence>
-                <motion.span
+                <Tag
                     initial="hidden"
                     animate="visible"
                     exit="hidden"
@@ -37,7 +47,7 @@ const BlurFade = ({ children, className, variant, delay = 0, yOffset = 8}: BlurF
                     className={cn("inline-block", className)}
                 >
                     {children}
-                </motion.span>
+                </Tag>
             </AnimatePresence>
         </div>
     );
