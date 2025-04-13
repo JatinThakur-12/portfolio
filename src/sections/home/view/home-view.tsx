@@ -7,7 +7,6 @@ import BlurFade from "@/components/motion/BlurFade";
 import Markdown from "react-markdown";
 import { TimelineCard } from "@/components/TimlineCard";
 import { Chip } from "@/components/ui/chip";
-import { Icons } from "@/components/Icons";
 import { ProjectCard } from "@/components/ProjectCard";
 import Link from "next/link";
 import { projectList } from "../data/projectList";
