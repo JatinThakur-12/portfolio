@@ -3,7 +3,6 @@ import { ThemeToggle } from "@/components/ToggleTheme";
 import { buttonVariants } from "@/components/ui/button";
 import { Divider } from "@/components/ui/divider";
 import { Tooltip } from "@/components/Tooltip";
-// import { DATA } from "@/data/resume";
 import { cn } from "@/lib/classes";
 import Link from "next/link";
 import { HomeIcon, NotebookIcon } from "lucide-react";

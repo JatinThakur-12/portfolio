@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/classes";
+import { useMemo } from "react";
 import { AnimatePresence, motion, MotionProps, Variants } from "framer-motion";
 
 interface BlurFadeTextProps {
@@ -23,13 +24,17 @@ const BlurFade = ({ children, className, variant, delay = 0, yOffset = 8, as,
     };
     const combinedVariants = variant || defaultVariants;
 
-    const Tag = motion.create(as ?? "div") as React.ForwardRefExoticComponent<
-        MotionProps &
-        React.RefAttributes<Element> & {
-            children: React.ReactNode;
-            className: string;
-        }
-    >;
+    const Tag = useMemo(
+        () =>
+            motion.create(as ?? "div") as React.ForwardRefExoticComponent<
+                MotionProps &
+                React.RefAttributes<Element> & {
+                    children: React.ReactNode;
+                    className: string;
+                }
+            >,
+        [as]
+    );
 
     return (
         <div className="inline-block">

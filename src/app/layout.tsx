@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Noto_Sans } from "next/font/google";
+import { Geist, Geist_Mono, Noto_Sans, Lobster, Orbitron } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/classes";
 import MainLayout from "@/layouts/main-layout";
@@ -20,10 +20,23 @@ const notoSans = Noto_Sans({
     variable: "--font-noto-sans",
     subsets: ["latin"],
 });
+
+const lobster = Lobster({
+    variable: "--font-lobster",
+    subsets: ["latin"],
+    weight: ["400"],
+});
+
+const orbitron = Orbitron({
+    variable: "--font-orbitron",
+    subsets: ["latin"],
+    weight: ["400"],
+});
+
 export const metadata: Metadata = {
     title: "Jatin Thakur",
     description:
-        "I'm Jatin Thakur | I harness the power of Node.js, SSR, and Next.js to create seamless user experiences.",
+        "I'm Jatin Thakur | Full-stack engineer who takes ideas from spec to production—wiring up the UI, APIs, and cloud infrastructure to build things that actually hold up.",
     keywords:
         "Jatin Thakur, Full Stack Developer, Frontend Developer, Backend Developer, MERN Stack, React.js, Next.js, SSR, Node.js, Express.js, JavaScript, TypeScript, Software Engineer, Web Performance, UI/UX, API Development",
     alternates: {
@@ -32,7 +45,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "Jatin Thakur",
         description:
-            "I'm Jatin Thakur | I harness the power of Node.js, SSR, and Next.js to create seamless user experiences.",
+            "I'm Jatin Thakur | Full-stack engineer who takes ideas from spec to production—wiring up the UI, APIs, and cloud infrastructure to build things that actually hold up.",
         url: "https://www.jatinthakur.in",
         siteName: "Jatin Thakur",
         locale: "en_US",
@@ -43,7 +56,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         site: "@JatinThakur_12",
         title: "Jatin Thakur | Full Stack Developer",
-        description: "I'm Jatin Thakur | I harness the power of Node.js, SSR, and Next.js to create seamless user experiences.",
+        description: "I'm Jatin Thakur | Full-stack engineer who takes ideas from spec to production—wiring up the UI, APIs, and cloud infrastructure to build things that actually hold up.",
         images: "https://www.jatinthakur.in/assets/avatar-image.png",
     }
 };
@@ -70,6 +83,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     geistSans.variable,
                     geistMono.variable,
                     notoSans.variable,
+                    lobster.variable,
+                    orbitron.variable,
                     "antialiased"
                 )}
             >

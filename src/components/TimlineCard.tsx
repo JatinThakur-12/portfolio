@@ -23,24 +23,24 @@ export const TimelineCard = ({ logoUrl, altText, title, subtitle, href, badges, 
     const [isExpanded, setIsExpanded] = React.useState(false);
 
     const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+        e.preventDefault();
         if (description) {
-            e.preventDefault();
             setIsExpanded(!isExpanded);
         }
     };
 
     return (
-        <Link href={href || "#"} className="block cursor-pointer" onClick={handleClick}>
+        <Link href={href || "#"} className="block cursor-pointer w-full" onClick={handleClick}>
             <Card className="flex">
                 <div className="flex-none">
-                    <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground bg-white">
+                    <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground bg-white p-1">
                         <AvatarImage src={logoUrl} alt={altText} className="object-contain" />
                         <AvatarFallback>{altText[0]}</AvatarFallback>
                     </Avatar>
                 </div>
                 <div className="flex-grow ml-4 items-center flex-col group">
                     <CardHeader>
-                        <div className="flex items-center justify-between gap-x-2 text-base">
+                        <div className="flex items-center justify-between gap-x-2 text-base mt-1">
                             <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
                                 {title}
                                 {badges && (
@@ -61,7 +61,7 @@ export const TimelineCard = ({ logoUrl, altText, title, subtitle, href, badges, 
                             </h3>
                             <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">{period}</div>
                         </div>
-                        {subtitle && <div className="font-sans text-xs">{subtitle}</div>}
+                        {subtitle && <div className="font-sans text-xs mt-1">{subtitle}</div>}
                     </CardHeader>
                     {description && (
                         <motion.div

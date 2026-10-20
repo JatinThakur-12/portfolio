@@ -19,13 +19,13 @@ const config = {
                 geist_mono: ["var(--font-geist-mono)"],
                 geist_sans: ["var(--font-geist-sans)"],
                 noto_sans: ["var(--font-noto-sans)"],
+                lobster: ["var(--font-lobster)"],
+                orbitron: ["var(--font-orbitron)"],
             },
             colors: {
                 border: "hsl(var(--border))",
                 input: "hsl(var(--input))",
                 ring: "hsl(var(--ring))",
-                // background: "var(--background)",
-                // foreground: "var(--foreground)",
 
                 background: "hsl(var(--background))",
                 foreground: "hsl(var(--foreground))",

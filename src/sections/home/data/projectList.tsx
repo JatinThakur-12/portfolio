@@ -4,7 +4,7 @@ export const projectList = [
     {
         title: "Travomint",
         href: "https://www.travomint.com",
-        dates: "May 2024 - Present",
+        dates: "May 2024 - Jul 2026",
         active: true,
         description:
             "Built features like dynamic filtering, meal and baggage selection, and a custom CRM for managing bookings, leads, and emails. I also created admin tools for configuring banners, offers, and site content — all designed to deliver a clean and efficient user experience.",
