@@ -81,7 +81,7 @@ function HomeView() {
                             subtitle="Frontend Developer"
                             logoUrl="https://www.travomint.com/Image/logo.png"
                             altText="Travomint"
-                            period="May,2024 - Jul,2026"
+                            period="May,2024 - Jul,2025"
                             description={`Led the frontend development using Next.js, Typescript, Redux ensuring robust and scalable architecture.Implemented state management solutions to ensure a smooth and dynamic user experience.Focused on performance optimization and responsiveness to handle high traffic volumes.Collaborated with designers and backend developers to integrate APIs and ensure a seamless booking process.Developed and implemented new features, enhancing user experience and functionality.`}
                         />
                     </BlurFade>
