@@ -71,7 +71,7 @@ function HomeView() {
                             subtitle="Software Development Engineer 1"
                             logoUrl="https://divine-voice-26cf.thakurjatinx.workers.dev/Nxtwave_Colored.svg"
                             altText="Travomint"
-                            period="Jul,2026 - Present"
+                            period="Jul,2025 - Present"
                             description={`At NxtWave, I build student-facing learning and assessment experiences on an education platform, along with the Python services and APIs behind them. I implemented platform-wide security and academic-integrity controls, including facial authentication with anti-spoofing and automated blocking of AI browsers, third-party AI extensions, and copy-paste during evaluations. I defined the API contract and a 10-second heartbeat protocol that classifies learner engagement as Active, Passive, or Non-Learning, streaming telemetry to AWS CloudWatch. I also delivered adaptive practice experiences, an AI-powered coaching flow across four repositories, new assessment question types, and interactive tools such as a SQL query visualizer and a notes workspace with a rich-text editor. On the reliability side, I rolled out feature-scoped error boundaries, fixed Sentry-tracked production defects, and built usage dashboards and logging for the IDE infrastructure. I write Jest and Pytest tests alongside my features and use Cursor IDE to speed up debugging and code review.`}
                         />
                     </BlurFade>
